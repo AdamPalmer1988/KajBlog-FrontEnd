@@ -5,7 +5,6 @@ import { BlogDetailsComponent } from './components/blog-details/blog-details.com
 import { CreateBlogComponent } from './components/create-blog/create-blog.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 
-
 export const routes: Routes = [
     {path: '', component:MainPageComponent},
     {path: '', component:BlogCardComponent},
