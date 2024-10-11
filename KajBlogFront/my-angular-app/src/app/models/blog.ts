@@ -5,3 +5,4 @@ export interface Blog {
     BlogBody: string;
     TimeStamp: Date;
 }
+
