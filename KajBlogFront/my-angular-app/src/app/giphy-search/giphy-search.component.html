@@ -1,0 +1,10 @@
+<div>
+    <input [(ngModel)]="query" placeholder="Search Gifs" />
+    <button (click)="search()">Search</button>
+  </div>
+  <div *ngIf="gifs.length">
+    <div *ngFor="let gif of gifs">
+      <img [src]="gif.images.fixed_height.url" alt="Gif" />
+    </div>
+  </div>
+  

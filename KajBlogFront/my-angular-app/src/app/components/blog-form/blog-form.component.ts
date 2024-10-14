@@ -2,13 +2,14 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import { GiphySearchComponent } from "../../giphy-search/giphy-search.component";
 
 
 
 @Component({
   selector: 'app-blog-form',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, GiphySearchComponent],
   templateUrl: './blog-form.component.html',
   styleUrl: './blog-form.component.css'
 })
