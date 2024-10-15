@@ -22,7 +22,7 @@ export class GiphySearchComponent {
     this.trending();
   }
 
-  search(): void {
+  search(query:string): void {
     this.giphyService.search(this.query).subscribe(response => {this.gifs = response.data;})
   }
 

@@ -1,6 +1,6 @@
 <div>
     <input [(ngModel)]="query" placeholder="Search Gifs" />
-    <button (click)="search()">Search</button>
+    <button (click)="search(query)">Search</button>
   </div>
   <div *ngIf="gifs.length">
     <div *ngFor="let gif of gifs">

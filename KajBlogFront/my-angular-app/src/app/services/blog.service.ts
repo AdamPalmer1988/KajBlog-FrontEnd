@@ -8,12 +8,13 @@ import { Blog } from '../models/blog';
   providedIn: 'root'
 })
 export class BlogService {
-
-  blogUrl: string = environment.apiUrl + "/Blogs";
+  
+  blogUrl:string = environment.apiUrl + "/Blog";
 
   constructor(private httpClient: HttpClient) { }
 
   GetAllBlogs(): Observable<Blog[]> {
+    console.log(this.blogUrl)
     return this.httpClient.get<Blog[]>(this.blogUrl);
   }
 
@@ -33,3 +34,5 @@ export class BlogService {
     return this.httpClient.put(`${this.blogUrl}/${blog.BlogId}`, blog);
   }
 }
+
+

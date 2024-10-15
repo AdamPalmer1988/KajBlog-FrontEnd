@@ -29,15 +29,17 @@
                 placeholder="Enter User Name: "
                 />
         </div>
-        <button type="submit" [disabled]="!myForm" class="btn-submit">
-            Submit
-        </button>
 
         <div>
             <app-giphy-search></app-giphy-search>
         </div>
 
+        <button type="submit" [disabled]="!myForm" class="btn-submit">
+            Submit
+        </button>
 
     </form>
+
+    <app-post-list></app-post-list>
 </div>
 </div>

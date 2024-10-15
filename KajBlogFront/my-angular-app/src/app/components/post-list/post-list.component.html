@@ -1,1 +1,21 @@
-<p>post-list works!</p>
+<div>
+    <table>
+        <thead>
+            <th>Blog Id</th>
+            <th>Category</th>
+            <th>Subject</th>
+            <th>Blog</th>
+            <th>Date</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let blog of blogs">
+                <td>{{blog.BlogId}}</td>
+                <td>{{blog.Category}}</td>
+                <td>{{blog.SubjectLine}}</td>
+                <td>{{blog.BlogBody}}</td>
+                <td>{{blog.TimeStamp}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
