@@ -8,8 +8,8 @@ import { Blog } from '../models/blog';
   providedIn: 'root'
 })
 export class BlogService {
-
-  blogUrl: string = environment.apiUrl + "/Blogs";
+  
+  blogUrl:string = environment.apiUrl + "/Blog";
 
   constructor(private httpClient: HttpClient) { }
 
@@ -30,6 +30,8 @@ export class BlogService {
   }
 
   UpdateBlog(blog:Blog){
-    return this.httpClient.put(`${this.blogUrl}/${blog.BlogId}`, blog);
+    return this.httpClient.put(`${this.blogUrl}/${blog.blogId}`, blog);
   }
 }
+
+

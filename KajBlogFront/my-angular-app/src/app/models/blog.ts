@@ -1,8 +1,10 @@
 export interface Blog {
-    BlogId: number;
-    Category: string;
-    SubjectLine: string; 
-    BlogBody: string;
-    TimeStamp: Date;
+    blogId: number;
+    userId: string;
+    category: string;
+    subjectLine: string; 
+    blogBody: string;
+    // createdOn: Date;
+    giphyPull: string;
 }
 
