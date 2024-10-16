@@ -14,7 +14,6 @@ export class BlogService {
   constructor(private httpClient: HttpClient) { }
 
   GetAllBlogs(): Observable<Blog[]> {
-    console.log(this.blogUrl)
     return this.httpClient.get<Blog[]>(this.blogUrl);
   }
 
@@ -31,7 +30,7 @@ export class BlogService {
   }
 
   UpdateBlog(blog:Blog){
-    return this.httpClient.put(`${this.blogUrl}/${blog.BlogId}`, blog);
+    return this.httpClient.put(`${this.blogUrl}/${blog.blogId}`, blog);
   }
 }
 

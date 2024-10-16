@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
-import { GiphySearchComponent } from "../../giphy-search/giphy-search.component";
+import { GiphySearchComponent } from "../giphy-search/giphy-search.component";
 import { PostListComponent } from "../post-list/post-list.component";
 
 
@@ -10,7 +10,7 @@ import { PostListComponent } from "../post-list/post-list.component";
 @Component({
   selector: 'app-blog-form',
   standalone: true,
-  imports: [ReactiveFormsModule, GiphySearchComponent, PostListComponent],
+  imports: [ReactiveFormsModule, PostListComponent, GiphySearchComponent],
   templateUrl: './blog-form.component.html',
   styleUrl: './blog-form.component.css'
 })

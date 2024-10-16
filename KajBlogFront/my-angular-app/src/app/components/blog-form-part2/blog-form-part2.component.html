@@ -1,0 +1,28 @@
+<div class="container">
+    <h2>Create Blog</h2>
+    <form (ngSubmit)="createBlog()">
+        <div class="form-group">
+            <label for="Catagory">Catagory</label>
+            <input type="text" id="category" [(ngModel)]="category" name="category" required maxlength="100">
+        </div>
+
+        <div class="form-group">
+            <label for="subjectLine">Subject</label>
+            <input type="text" id="subjectLine" [(ngModel)]="subjectLine" name="subjectLine" required maxlength="100">
+        </div>
+
+        <div class="form-group">
+            <label for="blogBody">Blog Body</label>
+            <input type="text" id="blogBody" [(ngModel)]="blogBody" name="blogBody" required maxlength="500">
+        </div>
+
+        <!-- <div class="form-group">
+            <label for="timeStamp">Time Stamp</label>
+            <input type="datetime-local" id="timeStamp" [(ngModel)]="timeStamp" name="timeStamp" required >
+        </div> -->
+
+
+        
+        <button type="submit">Create Blog</button>
+    </form>
+</div>

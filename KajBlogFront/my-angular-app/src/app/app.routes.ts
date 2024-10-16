@@ -9,12 +9,12 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 export const routes: Routes = [
     {path: '', component:MainPageComponent},
-    {path: '', component:BlogFormComponent},
-    {path: '', component:CategoryListComponent},
-    {path: '', component:FavoritesListComponent},
-    {path: '', component:NavBarComponent},
-    {path: '', component:PostListComponent},
-    {path: '', component:ReactiveFormsModule}
+    // {path: '', component:BlogFormComponent},
+    // {path: '', component:CategoryListComponent},
+    // {path: '', component:FavoritesListComponent},
+    // {path: '', component:NavBarComponent},
+    // {path: '', component:PostListComponent},
+    // {path: '', component:ReactiveFormsModule}
 ];
 
 

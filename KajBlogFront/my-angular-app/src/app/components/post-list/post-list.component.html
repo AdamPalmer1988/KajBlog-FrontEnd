@@ -1,21 +1,22 @@
 <div>
     <table>
         <thead>
-            <th>Blog Id</th>
+            <th>userId</th>
             <th>Category</th>
             <th>Subject</th>
             <th>Blog</th>
-            <th>Date</th>
+            <!-- <th>Date</th> -->
+             <th>Gif</th>
+            <th></th>
         </thead>
         <tbody>
             <tr *ngFor="let blog of blogs">
-                <td>{{blog.BlogId}}</td>
-                <td>{{blog.Category}}</td>
-                <td>{{blog.SubjectLine}}</td>
-                <td>{{blog.BlogBody}}</td>
-                <td>{{blog.TimeStamp}}</td>
+                <td>{{blog.userId}}</td>
+                <td>{{blog.category}}</td>
+                <td>{{blog.subjectLine}}</td>
+                <td>{{blog.blogBody}}</td>
+                <!-- <td>{{blog.createdOn}}</td> -->
             </tr>
         </tbody>
     </table>
 </div>
-

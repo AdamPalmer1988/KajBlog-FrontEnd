@@ -23,6 +23,7 @@ export class PostListComponent {
     loadBlogs(){
       this.blogService.GetAllBlogs().subscribe(
         (blogs) => {
+          console.log(blogs)
           this.blogs = blogs;
         }
       )
