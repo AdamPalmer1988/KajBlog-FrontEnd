@@ -24,4 +24,12 @@
             Blog Body is Required
         </div>
      </div>
-</form>
+
+     <div>
+        <app-gifs (gifEvent)="onGiphySelected($event)"></app-gifs>
+     </div>
+
+     <div *ngIf="blogForm.get('giphyPull')"><h3>Selected GIF:</h3><img [src]="blogForm.get('giphyPull')" alt="Selected Giphy" /></div>
+
+     <button type="submit">Submit</button>
+    </form>
