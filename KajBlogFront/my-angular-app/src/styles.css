@@ -4,9 +4,18 @@
     list-style: none; /* removes default list bullets */
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
-    line-height: 1.6;
+    line-height: 2;
     color: rgba(242, 242, 254, 0.7);
     overflow-x: hidden;
     background: #0f0f3e;
     font-size: 0.9rem;
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+    background-color: rgb(24, 24, 24);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #5854C7, #1E1E66);
 }

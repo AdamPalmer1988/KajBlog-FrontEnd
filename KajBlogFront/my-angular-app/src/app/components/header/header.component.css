@@ -10,13 +10,14 @@ a {
     color: #f2f2fe;
     transition: all 300ms ease;
     background: #6f6af8;
+    text-decoration: none; /* Removes the line underneath link */
 }
 
 
 nav {
     background: #6f6af8;
     width: 100vw;
-    height: 4.5rem;
+    height: 6.8rem;
     position: fixed;
     top: 0;
     z-index: 10;
@@ -38,7 +39,7 @@ nav button {
 .nav__logo {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 3.4rem;
     margin: 0 auto;
     text-align: center;
     width: 100%;
