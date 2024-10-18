@@ -9,4 +9,21 @@
     width: 100%;
     padding: 8px 16px;
     margin-top: 20px;
+    display: block;
+    margin-left: 3.7rem;
+}
+
+input[type="text"],
+textarea {
+    margin-left: 3.7rem;
+}
+
+
+
+h4 {
+    font-weight: bold;
+    font-size: 20px;
+    color: #f9f9f9;
+    display: block;
+    margin-left: 3.7rem;
 }
