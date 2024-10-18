@@ -5,7 +5,6 @@
             <th>Category</th>
             <th>Subject</th>
             <th>Blog</th>
-            <!-- <th>Date</th> -->
              <th>Gif</th>
             <th></th>
         </thead>
@@ -15,7 +14,7 @@
                 <td>{{blog.category}}</td>
                 <td>{{blog.subjectLine}}</td>
                 <td>{{blog.blogBody}}</td>
-                <!-- <td>{{blog.createdOn}}</td> -->
+                <td><img [src] = "blog.giphyPull"></td>
             </tr>
         </tbody>
     </table>
