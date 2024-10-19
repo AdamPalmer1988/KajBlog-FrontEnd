@@ -9,12 +9,13 @@ import { BlogFormPart2Component } from "../blog-form-part2/blog-form-part2.compo
 import { GifsComponent } from '../gifs/gifs.component';
 import { SearchComponent } from "../search/search.component";
 import { HeaderComponent } from "../header/header.component";
+import { LoginComponent } from "../login/login.component";
 
 
   @Component({
     selector: 'app-main-page',
     standalone: true,
-    imports: [BlogFormComponent, NavBarComponent, PostListComponent, GiphySearchComponent, BlogFormPart2Component, GifsComponent, SearchComponent, HeaderComponent],
+    imports: [BlogFormComponent, NavBarComponent, PostListComponent, GiphySearchComponent, BlogFormPart2Component, GifsComponent, SearchComponent, HeaderComponent, LoginComponent],
     templateUrl: './main-page.component.html',
     styleUrl: './main-page.component.css'
   })

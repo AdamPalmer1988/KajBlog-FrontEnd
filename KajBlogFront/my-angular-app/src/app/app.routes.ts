@@ -6,15 +6,14 @@ import { FavoritesListComponent } from './components/favorites-list/favorites-li
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { PostListComponent } from './components/post-list/post-list.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './components/login/login.component';
+import { BlogFormPart2Component } from './components/blog-form-part2/blog-form-part2.component';
 
 export const routes: Routes = [
     {path: '', component:MainPageComponent},
-    // {path: '', component:BlogFormComponent},
-    // {path: '', component:CategoryListComponent},
-    // {path: '', component:FavoritesListComponent},
-    // {path: '', component:NavBarComponent},
-    // {path: '', component:PostListComponent},
-    // {path: '', component:ReactiveFormsModule}
+    {path: 'login', component:LoginComponent},
+    {path: 'blog-form-part2', component:BlogFormPart2Component},
+    {path: 'post-list', component:PostListComponent}
 ];
 
 

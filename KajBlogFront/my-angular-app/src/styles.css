@@ -1,5 +1,4 @@
 
-
 * {
     list-style: none; /* removes default list bullets */
     text-decoration: none;
@@ -7,9 +6,9 @@
     line-height: 2;
     color: rgba(242, 242, 254, 0.7);
     overflow-x: hidden;
-    background: #0f0f3e;
+    background: #4a3879;
     font-size: 0.9rem;
-}
+} 
 
 ::-webkit-scrollbar {
     width: 20px;

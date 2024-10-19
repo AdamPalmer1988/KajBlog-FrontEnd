@@ -1,11 +1,5 @@
 <nav>
-   
-    <div class="container nav__container"> 
-        <a href="index.html" class="nav__logo">KajBlog</a>
-    </div>
-    
-    <div>
-         <button (click)="showAllBlogs()">All Blogs</button>
-    </div>
-       
+    <button [routerLink] ="['login']" href="http://localhost:4200/login">Login</button>
+    <button [routerLink]="['blog-form-part2']" href="http://localhost:4200/blog-form-part2">Create Blog</button>
+    <button [routerLink]="['post-list']" href="http://localhost:4200/post-list">Blogs</button>
 </nav>

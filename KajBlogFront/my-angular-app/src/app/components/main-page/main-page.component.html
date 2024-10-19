@@ -1,46 +1,20 @@
-<!--  main-page.component.html -->
-<div class="main-page">
+<!-- Header for the Main-Page -->
+ <h1>
+    <app-header></app-header>
+</h1>
 
-    <!--  KajBlog Header -->
-    <section>
-     <app-header></app-header>
-    </section>
-      
-    <!-- Nav-Bar -->
+ <!-- Nav-Bar for the Main Page -->
+  <h1>
+    <app-nav-bar></app-nav-bar>
+    </h1>
 
-    <!--  blog-form -->    
-    <section class="blog-form">
-        <!--<app-blog-form></app-blog-form> -->
+<!-- Form to Create new Blog -->
+ <app-blog-form-part2></app-blog-form-part2>
 
-    </section>
+ <!-- All of the Posts -->
+  <app-post-list></app-post-list>
 
-    <!--  Post List component to show recent or all posts -->
-    <section class="post-list">
-        <app-post-list></app-post-list>
-    </section>
-    
-    <app-blog-form-part2></app-blog-form-part2>
-<!-- Giphy Search -->
-
-
-    <section>
-
-    </section>
-
-      </div>
-       
-    <!--
-    <body>
-    <nav>
-        <div class="container nav__container">
-            <a href="index.html" class="nav__logo">KajBlog</a>
-        </div>
-        <ul class="options">
-            <li><a href="main-page.component.html">Home</a></li>
-            <li><a href="create-blog.component.html">Create Blog</a></li>
-            <li><a href="favorite.ts">Favorites</a></li>
-        </ul>
-    </nav>
-    </body>
-    -->
-    
+  <!-- Login -->
+<footer>
+    <app-login></app-login>
+</footer>
