@@ -15,7 +15,7 @@ export class GiphyService {
   constructor(private http: HttpClient) { }
 
   getTrendingGifs() {
-    const url = `${this.apiUrl}/trending?api_key=${this.apiGiphyKey}&limit=10`;
+    const url = `${this.apiUrl}/trending?api_key=${this.apiGiphyKey}&limit=8`;
     return this.http.get(url)
     .subscribe((response:any) => {
       this.gifs.next(response.data)
@@ -23,7 +23,7 @@ export class GiphyService {
   }
 
   searchGifs(gifName: string) {
-    const url = `${this.apiUrl}/search?q=${gifName}&api_key=${this.apiGiphyKey}&limit=10`;
+    const url = `${this.apiUrl}/search?q=${gifName}&api_key=${this.apiGiphyKey}&limit=8`;
     return this.http.get(url)
     .subscribe((response:any) => {
       this.gifs.next(response.data)
