@@ -1,6 +1,6 @@
 .container {
     width:100%;
-    background: #6f6af8;
+    background:  #37306B;
     max-width: 1800px;
     margin-inline: auto;  /* same as....margin: 0 auto; */
 
@@ -15,7 +15,7 @@ a {
 
 
 nav {
-    background: #6f6af8;
+    background:  #37306B;
     width: 100vw;
     height: 6.8rem;
     position: fixed;
