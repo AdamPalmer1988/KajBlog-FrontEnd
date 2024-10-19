@@ -13,7 +13,8 @@ export const routes: Routes = [
     {path: '', component:MainPageComponent},
     {path: 'login', component:LoginComponent},
     {path: 'blog-form-part2', component:BlogFormPart2Component},
-    {path: 'post-list', component:PostListComponent}
+    {path: 'post-list', component:PostListComponent},
+    {path: 'favorite-list', component:FavoritesListComponent}
 ];
 
 
