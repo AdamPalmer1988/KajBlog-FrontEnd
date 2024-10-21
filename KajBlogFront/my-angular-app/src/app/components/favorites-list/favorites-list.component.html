@@ -1,1 +1,9 @@
-<p>favorites-list works!</p>
+<div>
+    <h2>Your Favorites</h2>
+    <ul>
+      <li *ngFor="let favorite of favorites">
+        <button (click)="removeFavorite(favorite.Id)">Remove from Favorites</button>
+      </li>
+    </ul>
+  </div>
+  
