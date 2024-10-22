@@ -1,32 +1,31 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Favorite } from '../models/favorite';
+import { Blog } from '../models/blog';
+import { environment } from '../../environments/environment.development';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class FavoritesService {
-  private apiUrl = 'http://localhost:4200/api/favorites'; 
+  favoriteUrl:string = environment.apiUrl + "/favorites";
   constructor(private http: HttpClient) { }
-  getFavoritesByUserId(userId: number): Observable<any> {
-    return this.http.get<any>(`${this.apiUrl}/${userId}`);
+
+  // Get all favorites
+  getFavorites(): Observable<Blog[]> {
+    return this.http.get<Blog[]>(this.favoriteUrl);
   }
 
-  getAllFavorites(): Observable<Favorite[]> {
-    return this.http.get<Favorite[]>(this.apiUrl);
+  // Add a favorite
+  addFavorite(blogId: number): Observable<void> {
+    return this.http.post<void>(`${this.favoriteUrl}/${blogId}`, null, {
+    });
   }
 
-  createFavorite(favoriteDto: Favorite): Observable<Favorite> {
-    return this.http.post<Favorite>(this.apiUrl, favoriteDto);
-  }
-
-  updateFavorite(id: number, favoriteDto: Favorite): Observable<Favorite> {
-    return this.http.put<Favorite>(`${this.apiUrl}/${id}`, favoriteDto);
-  }
-
-  deleteFavorite(id: number): Observable<void> {
-    return this.http.delete<void>(`${this.apiUrl}/${id}`);
+  // Remove a favorite
+  removeFavorite(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.favoriteUrl}/${id}`, {
+    });
   }
 }
-

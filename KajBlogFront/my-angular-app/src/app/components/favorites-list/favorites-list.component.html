@@ -1,9 +1,17 @@
-<div>
-    <h2>Your Favorites</h2>
-    <ul>
-      <li *ngFor="let favorite of favorites">
-        <button (click)="removeFavorite(favorite.Id)">Remove from Favorites</button>
-      </li>
-    </ul>
+<div class="favorites-container">
+  <h2>Your Favorite Blogs</h2>
+
+  <div *ngIf="favorites.length === 0">
+    <p>You have no favorite blogs yet.</p>
   </div>
-  
+
+  <ul *ngIf="favorites.length > 0">
+    <li *ngFor="let blog of favorites">
+      <h3>{{ blog.subjectLine }}</h3>
+      <p>{{ blog.blogBody }}</p>
+      <p><strong>Category:</strong> {{ blog.category }}</p>
+      <p><strong>Created On:</strong> {{ blog.createdOn | date }}</p>
+      <button (click)="removeFavorite(blog.blogId)">Remove from Favorites</button>
+    </li>
+  </ul>
+

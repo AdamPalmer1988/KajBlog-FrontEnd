@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
-import { Favorite } from '../../models/favorite';
+import { Component, OnInit } from '@angular/core';
+import { Blog } from '../../models/blog';
 import { FavoritesService } from '../../services/favorites.service';
 import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-favorites-list',
@@ -10,33 +11,33 @@ import { CommonModule } from '@angular/common';
   templateUrl: './favorites-list.component.html',
   styleUrl: './favorites-list.component.css'
 })
-export class FavoritesListComponent {
-  favorites: Favorite[] = [];
-  userId: number = 1;
+export class FavoritesListComponent implements OnInit {
+  favorites: Blog[] = [];
 
-  constructor(private FavoritesService: FavoritesService) {}
+  constructor(private favoritesService: FavoritesService) {}
 
   ngOnInit(): void {
     this.loadFavorites();
   }
 
-  loadFavorites() {
-    this.FavoritesService.getFavoritesByUserId(this.userId).subscribe(data => {
-      this.favorites = data;
-      console.log(this.favorites);
-    });
+  loadFavorites(): void {
+    this.favoritesService.getFavorites().subscribe(
+      (data) => this.favorites = data,
+      (error) => console.error('Error fetching favorites', error)
+    );
   }
 
-  addFavorite(blogId: number) {
-    const newFavorite: Favorite = { UserId: this.userId, BlogId: blogId, Id: 0  };
-    this.FavoritesService.createFavorite(newFavorite).subscribe(() => {
-      this.loadFavorites(); 
-    });
+  addFavorite(blogId: number): void {
+    this.favoritesService.addFavorite(blogId).subscribe(
+      () => this.loadFavorites(),
+      (error) => console.error('Error adding favorite', error)
+    );
   }
 
-  removeFavorite(id: number) {
-    this.FavoritesService.deleteFavorite(id).subscribe(() => {
-      this.loadFavorites(); // Refresh the list
-    });
+  removeFavorite(id: number): void {
+    this.favoritesService.removeFavorite(id).subscribe(
+      () => this.loadFavorites(),
+      (error) => console.error('Error removing favorite', error)
+    );
   }
 }
