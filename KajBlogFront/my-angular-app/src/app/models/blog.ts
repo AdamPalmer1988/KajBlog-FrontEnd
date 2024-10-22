@@ -4,7 +4,7 @@ export interface Blog {
     category: string;
     subjectLine: string; 
     blogBody: string;
-    // createdOn: Date;
+    createdOn: Date;
     giphyPull: string;
 }
 

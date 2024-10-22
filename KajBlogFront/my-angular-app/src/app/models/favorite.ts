@@ -1,5 +1,7 @@
 export interface Favorite {
-    Id: number;
-    UserId: number;
-    BlogId: number;
+    id: number;
+    blogId: number;
+    userId: string;
+    createdOn: Date;
+    createdBy: string;
 }
