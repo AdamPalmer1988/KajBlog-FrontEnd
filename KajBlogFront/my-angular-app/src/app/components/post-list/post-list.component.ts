@@ -3,6 +3,7 @@ import { Component, inject } from '@angular/core';
 import { BlogService } from '../../services/blog.service';
 import { Blog } from '../../models/blog';
 import { HeaderComponent } from "../header/header.component";
+import { FavoritesService } from '../../services/favorites.service';
 
 @Component({
   selector: 'app-post-list',
@@ -13,7 +14,8 @@ import { HeaderComponent } from "../header/header.component";
 })
 export class PostListComponent {
 
-    blogService = inject(BlogService)
+    blogService = inject(BlogService);
+    favoriteService = inject(FavoritesService);
 
     blogs:Blog[] = [];
 
@@ -30,4 +32,11 @@ export class PostListComponent {
       )
     }
 
+    addBlogFavorite(blogId:number){
+      this.favoriteService.addFavorite(blogId).subscribe(
+        () => {
+          console.log('Favorite added!');
+        }
+      )
+    }
 }
