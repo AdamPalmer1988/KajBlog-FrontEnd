@@ -19,7 +19,7 @@ export class FavoritesService {
 
   // Add a favorite
   addFavorite(blogId: number): Observable<void> {
-    return this.http.post<void>(`${this.favoriteUrl}/${blogId}`, null, {
+    return this.http.post<void>(`${this.favoriteUrl}/blog/${blogId}`, null, {
     });
   }
 
