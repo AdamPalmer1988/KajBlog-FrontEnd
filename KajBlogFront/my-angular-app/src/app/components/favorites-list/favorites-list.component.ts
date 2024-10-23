@@ -2,12 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { Blog } from '../../models/blog';
 import { FavoritesService } from '../../services/favorites.service';
 import { CommonModule } from '@angular/common';
+import { HeaderComponent } from "../header/header.component";
 
 
 @Component({
   selector: 'app-favorites-list',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, HeaderComponent],
   templateUrl: './favorites-list.component.html',
   styleUrl: './favorites-list.component.css'
 })
